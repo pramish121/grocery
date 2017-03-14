@@ -7,8 +7,24 @@ import { passwordService } from './services/passwordService';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  authenticate:Boolean;
+  passwordModel={
+    "userName":"pramish@gmail.com",
+    "password":"123"
+  }
+  
+  validateUser=()=>{
+    
+    this._passwordService.setUserName(this.passwordModel.userName);
+    this._passwordService.setPassword(this.passwordModel.password);
 
+    this.authenticate=this._passwordService.checkPassword();
+  }
+
+  logout=()=>{
+    alert();
+    this.authenticate=false;
+  }
   constructor(private _passwordService:passwordService){
 
   }
@@ -16,10 +32,6 @@ export class AppComponent {
   ngOnInit() {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this._passwordService.setUserName("rejin@gmail.com");
-    this._passwordService.setPassword("ugly");
-
-    alert(this._passwordService.checkPassword());
-
   }
+  
 }

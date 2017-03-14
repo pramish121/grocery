@@ -1,0 +1,16 @@
+.password-form{
+    margin:30vh 30vw 0 30vw;
+    /*background-color:lightslategrey;*/
+    padding:2vh 5vw 5vh 5vw ;
+    width:auto;
+}
+.password-form label{
+    margin-top:2vh;
+}
+span{
+    color:blue;
+}
+.password-form .btn{
+    margin-top:2vh;
+    float:right;
+}

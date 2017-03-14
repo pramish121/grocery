@@ -1,4 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<form (submit)="validateUser()">
+  <div *ngIf="!authenticate" class="container password-form">
+    <h3>Ghanta App</h3>
+    <div class="row">
+        <md-input-container>
+          <input mdInput placeholder="Enter username" name="username" [(ngModel)]="passwordModel.userName">
+        </md-input-container>
+        <!--<input type="email" class="form-control" id="username" name="username" required [(ngModel)]="passwordModel.userName" placeholder="Enter User Name"> -->
+    </div>
+    <div class="row">
+        <md-input-container>
+            <input type="password" mdInput placeholder="Enter Password" name="password" [(ngModel)]="passwordModel.password">
+          </md-input-container>
+        <!--<input type="password" class="form-control" name="password" required [(ngModel)]="passwordModel.password" placeholder="Enter Password"> -->
+    </div>
+    <div class="row">
+      <span>Create Account</span>
+      <button class="btn btn-success" (click)="validateUser()">Login</button>
+      
+    </div>   
+  </div>
+</form>
+<div *ngIf="authenticate">
+  <label class="btn-success">Successfully loggedin</label>
+</div>
+<!--ng Material sample-->
 
+<md-tab-group *ngIf="authenticate">
+  <md-tab label="Add Roommate">Form To addromate goes here</md-tab>
+  <md-tab label="Display Table">Display the list of roomates</md-tab>
+  <md-tab label="logout"><button (click)="logout()">Logout</button></md-tab>
+</md-tab-group>
