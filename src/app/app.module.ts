@@ -6,13 +6,13 @@ import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { RoomateComponent } from './roomate/roomate.component';
 import { passwordService } from './services/passwordService';
+import { RoomateformComponent } from './roomateform/roomateform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoomateComponent
+    RoomateformComponent
   ],
   imports: [
     BrowserModule,

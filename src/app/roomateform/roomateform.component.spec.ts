@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoomateComponent } from './roomate.component';
+import { RoomateformComponent } from './roomateform.component';
 
-describe('RoomateComponent', () => {
-  let component: RoomateComponent;
-  let fixture: ComponentFixture<RoomateComponent>;
+describe('RoomateformComponent', () => {
+  let component: RoomateformComponent;
+  let fixture: ComponentFixture<RoomateformComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoomateComponent ]
+      declarations: [ RoomateformComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoomateComponent);
+    fixture = TestBed.createComponent(RoomateformComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

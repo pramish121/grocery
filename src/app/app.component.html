@@ -20,13 +20,5 @@
     </div>   
   </div>
 </form>
-<div *ngIf="authenticate">
-  <label class="btn-success">Successfully loggedin</label>
-</div>
-<!--ng Material sample-->
 
-<md-tab-group *ngIf="authenticate">
-  <md-tab label="Add Roommate">Form To addromate goes here</md-tab>
-  <md-tab label="Display Table">Display the list of roomates</md-tab>
-  <md-tab label="logout"><button (click)="logout()">Logout</button></md-tab>
-</md-tab-group>
+<app-roomateform *ngIf="authenticate"></app-roomateform>
