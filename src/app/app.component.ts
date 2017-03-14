@@ -19,16 +19,9 @@ export class AppComponent {
     this._passwordService.setUserName(this.passwordModel.userName);
     this._passwordService.setPassword(this.passwordModel.password);
     this._passwordService.checkPassword();
-    //this.authenticate=this._passwordService.checkPassword();
-    //this._passwordService.setAuthenticate(this.authenticate);
+    ;
   }
-
-  // logout=()=>{
-  //   this._passwordService.setAuthenticate(false);
-  //   this.authenticate = false;
-  // }
   constructor(private _passwordService:passwordService){
-    //this.authenticate=this._passwordService.authenticate;
   }
 
   ngOnInit() {

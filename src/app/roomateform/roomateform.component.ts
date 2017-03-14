@@ -10,10 +10,13 @@ export class RoomateformComponent implements OnInit {
   authenticate:Boolean;
   logout=()=>{
     this._passwordService.setAuthenticate(false);
-    this.authenticate = false;
   }
   constructor(private _passwordService:passwordService) { 
-    this.authenticate=this._passwordService.getAuthenticate();
+    this._passwordService.authUpdated.subscribe(
+      (authenticate)=>{
+        this.authenticate = this._passwordService.getAuthenticate();
+      }
+    );
   }
   
 
